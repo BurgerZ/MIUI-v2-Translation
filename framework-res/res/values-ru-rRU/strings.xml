@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="fast_scroll_alphabet">\u0020АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЭЮЯ</string>
+    <string name="fast_scroll_numeric_alphabet">\u00200123456789АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЭЮЯ</string>
+</resources>

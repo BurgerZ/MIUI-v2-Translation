@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="animation">
+        <item>Классический</item>
+        <item>Угасание</item>
+        <item>Вращение</item>
+        <item>Перелистывание</item>
+        <item>Каскад</item>
+        <item>Поворот</item>
+        <item>Куб</item>
+        <item>Обложки</item>
+    </string-array>
+</resources>

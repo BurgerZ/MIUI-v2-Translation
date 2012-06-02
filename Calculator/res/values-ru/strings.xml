@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Калькулятор</string>
+    <string name="error">Ошибка</string>
+    <string name="del">УДАЛИТЬ</string>
+    <string name="clear">СБРОС</string>
+    <string name="basic">Базовая панель</string>
+    <string name="advanced">Дополнительная панель</string>
+    <string name="clear_history">Очистка истории</string>
+</resources>

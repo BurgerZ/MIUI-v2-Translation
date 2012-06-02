@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_label">Статус-бар</string>
+    <string name="status_bar_clear_all_button">Очистить</string>
+    <string name="status_bar_no_notifications_title">Нет уведомлений</string>
+    <string name="status_bar_ongoing_events_title">Постоянные</string>
+    <string name="status_bar_latest_events_title">Уведомления</string>
+    <string name="battery_low_title">Подключите зарядное устройство!</string>
+    <string name="battery_low_subtitle">Заряд батареи снижается:</string>
+    <string name="battery_low_percent_format">Осталось меньше %d%% заряда</string>
+    <string name="battery_low_why">Расход заряда</string>
+    <string name="usb_accessory_permission_prompt">Разрешить приложению %1$s доступ к USB-аксессуару?</string>
+    <string name="usb_device_confirm_prompt">Открыть %1$s когда это USB-устройство подключено?</string>
+    <string name="usb_accessory_confirm_prompt">Открыть %1$s когда этот USB-аксессуар подключен?</string>
+    <string name="usb_accessory_uri_prompt">Нет установленных приложений работающих с этим USB-аксессуаром. Узнайте больше об этом аксессуаре на %1$s</string>
+    <string name="title_usb_accessory">USB-аксессуары</string>
+    <string name="label_view">Вид</string>
+    <string name="always_use_accessory">Использовать по умолчанию для этого USB-аксессуара</string>
+    <string name="tab_notifications_lable">Уведомления</string>
+    <string name="tab_toggles_lable">Переключатели</string>
+    <string name="status_bar_time_format_12">h:mma</string>
+    <string name="status_bar_time_format_24">H:mm</string>
+    <string name="status_bar_date_format">d MMMM yyyy,</string>
+    <string name="status_bar_date_format_lock">EEE, d MMMM yyyy</string>
+    <string name="usb_mode_notification">Подключить SD-карту</string>
+    <string name="usb_mode_dont_ask">Запомнить мой выбор</string>
+    <string name="usb_mode_mount_storage_title">Подключить USB накопитель?</string>
+    <string name="mount_storage">Подключить</string>
+    <string name="dismount_storage">Не подключать</string>
+    <string name="move_data_to_sdcard_title">Перенос данных на SD-карту</string>
+    <string name="move_data_to_sdcard_message">Скриншоты и фотографии будут перенесены на SD-карту чтобы освободить больше внутренней памяти.</string>
+    <string name="user_guide_for_notification">При получении нового уведомления, можно перетащить панели уведомлений вниз для получения дополнительных сведений</string>
+    <string name="user_guide_for_toggle">Список переключателей может прокручиваться по горизонтали</string>
+    <string name="user_guide_for_toggle_list">Нажмите, чтобы настроить список переключателей</string>
+    <string name="user_guide_for_call">Вернуться к телефонному разговору, можно перетащив вниз панель уведомлений и нажать кнопку Текущий вызов</string>
+    <string name="return_to_incall_screen">Нажмите для возврата к разговору</string>
+    <string name="call_status_dialing">Набор</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="download_filters">
+        <item>" Все"</item>
+        <item>" App Share"</item>
+        <item>" Музыка"</item>
+        <item>" Темы"</item>
+        <item>" Браузер"</item>
+        <item>" Другое"</item>
+    </string-array>
+</resources>

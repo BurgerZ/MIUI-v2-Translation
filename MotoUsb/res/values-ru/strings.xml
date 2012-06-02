@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="usb_period">.</string>
+    <string name="usb_ok">OK</string>
+    <string name="usb_cancel">Отмена</string>
+    <string name="usb_3_periods">...</string>
+    <string name="usb_toast_connecting_to">Подключение</string>
+    <string name="usb_toast_phone_data_disabled">Доступ к данным с телефона будет невозможен</string>
+    <string name="usb_no_memory_card_notification_title">Не вставлена SD-карта</string>
+    <string name="usb_no_memory_card_notification_message_title">Отсутствует SD-карта</string>
+    <string name="usb_no_memory_card_notification_message">Вставьте карту памяти</string>
+    <string name="usb_selection_notification_title">USB подключение</string>
+    <string name="usb_selection_notification_message">Выберите, для управления USB подключением</string>
+    <string name="usb_selection_notification_message_for_modem">Отключение и повторное включение памяти телефона</string>
+    <string name="usb_connection">USB подключение</string>
+    <string name="usb_mode_ngp">Motorola Phone Tools</string>
+    <string name="usb_mode_mtp">Синхронизация Windows Media</string>
+    <string name="usb_mode_msc">Доступ к SD-карте</string>
+    <string name="usb_mode_modem">Телефон в качестве модема</string>
+    <string name="usb_mode_none">Только зарядка</string>
+    <string name="usb_mode_bypass">CDMA-модем</string>
+    <string name="usb_toast_insert_card">Вставьте карту памяти</string>
+    <string name="usb_progress_message">Переключение</string>
+    <string name="usb_error_message">USB-подключение невозможно изменить на</string>
+</resources>
