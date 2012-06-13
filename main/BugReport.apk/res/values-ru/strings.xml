@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_label">Обратная связь</string>
+    <string name="app_label">Отзывы</string>
     <string name="user_feedback">Отзывы</string>
     <string name="user_feedback_preview">Предпросмотр отзыва</string>
     <string name="report_miui">Отчет MIUI</string>
