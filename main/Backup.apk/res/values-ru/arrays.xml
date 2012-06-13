@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="backup_dialog_content_type">
+        <item>Параметры Wi-Fi</item>
+        <item>Все приложения</item>
+    </string-array>
+    <string-array name="system_package_label">
+        <item>Галерея</item>
+        <item>Музыка</item>
+        <item>Диктофон</item>
+        <item>Интернет браузер</item>
+        <item>Камера</item>
+        <item>Файл менеджер</item>
+    </string-array>
+    <string-array name="system_data_label">
+        <item>Контакты</item>
+        <item>Журнал вызовов</item>
+        <item>Сообщения</item>
+        <item>Мультимедиа cообщения</item>
+        <item>Настройки системы</item>
+        <item>Параметры Wi-Fi</item>
+        <item>Рабочий стол</item>
+        <item>Будильник(и)</item>
+        <item>Заметки</item>
+        <item>Настройки файрвола</item>
+        <item>Оформление</item>
+        <item>Суперпользователь</item>
+    </string-array>
+    <string-array name="app_type_desc">
+        <item>(данные)</item>
+        <item>(приложение)</item>
+        <item>(приложение и данные)</item>
+    </string-array>
+    <string-array name="cloud_data_label">
+        <item>Контакты</item>
+        <item>Журнал вызовов</item>
+        <item>Сообщения</item>
+        <item>Параметры Wi-Fi</item>
+        <item>Заметки</item>
+    </string-array>
+    <string-array name="cloud_account_data">
+        <item>Контакты</item>
+        <item>Параметры Wi-Fi</item>
+        <item>Заметки</item>
+    </string-array>
+    <string-array name="cloud_sim_data">
+        <item>Журнал вызовов</item>
+        <item>Сообщения</item>
+    </string-array>
+</resources>
