@@ -59,7 +59,7 @@
     <string name="pref_camera_referenceline_goldenratio">Золотое сечение</string>
     <string name="pref_camera_scenedetect">Детектор сцен</string>
     <string name="pref_camera_lensshade">Виньетирование</string>
-    <string name="pref_camera_skintone_enhancement">Улутшение тона кожи</string>
+    <string name="pref_camera_skintone_enhancement">Улучшение тона кожи</string>
     <string name="pref_camera_other_setting">Настройки камеры</string>
     <string name="pref_camera_focusmode">Режим фокусировки</string>
     <string name="pref_camera_focusmode_auto">Авто</string>
