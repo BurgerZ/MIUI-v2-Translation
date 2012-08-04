@@ -121,19 +121,19 @@
     <string name="twenty_four_hour_time_format">HH:mm</string>
     <string name="numeric_date">%-m/%-e/%Y</string>
     <string name="numeric_date_format">M/d/yyyy</string>
-    <string name="numeric_date_template">%s/%s/%s</string>
-    <string name="month_day_year">%B %-e, %Y</string>
+    <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
+    <string name="month_day_year" formatted="false">%B %-e, %Y</string>
     <string name="time_of_day">%-l:%M:%S %p</string>
     <string name="date_and_time">%b %-e, %Y, %-l:%M:%S %p</string>
     <string name="date_time">%1$s, %2$s</string>
     <string name="time_date">%1$s, %3$s</string>
-    <string name="abbrev_month_day_year">%b %-e, %Y</string>
-    <string name="month_day">%B %-e</string>
+    <string name="abbrev_month_day_year" formatted="false">%b %-e, %Y</string>
+    <string name="month_day" formatted="false">%B %-e</string>
     <string name="month">%-B</string>
-    <string name="month_year">%B %Y</string>
-    <string name="abbrev_month_day">%b %-e</string>
+    <string name="month_year" formatted="false">%B %Y</string>
+    <string name="abbrev_month_day" formatted="false">%b %-e</string>
     <string name="abbrev_month">%-b</string>
-    <string name="abbrev_month_year">%b %Y</string>
+    <string name="abbrev_month_year" formatted="false">%b %Y</string>
     <string name="time1_time2">%1$s – %2$s</string>
     <string name="date1_date2">%2$s – %5$s</string>
     <string name="numeric_md1_md2">%2$s/%3$s – %7$s/%8$s</string>
@@ -675,8 +675,8 @@
     <string name="lockscreen_sim_puk_locked_instructions">См. руководство пользователя или свяжитесь со службой поддержки.</string>
     <string name="lockscreen_sim_locked_message">SIM-карта блокирована</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Разблокировка SIM-карты...</string>
-    <string name="lockscreen_too_many_failed_attempts_dialog_message">Вы неправильно воспроизвели комбинацию разблокировки %d раз. \n\nПовторите попытку через %d сек.</string>
-    <string name="lockscreen_failed_attempts_almost_glogin">Вы неверно воспроизвели комбинацию разблокировки %d раз(а). После %d неудачных попыток(ки) придется разблокировать телефон с помощью входа Google.\n\n Повторите попытку через %d сек.</string>
+    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">Вы неправильно воспроизвели комбинацию разблокировки %d раз. \n\nПовторите попытку через %d сек.</string>
+    <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">Вы неверно воспроизвели комбинацию разблокировки %d раз(а). После %d неудачных попыток(ки) придется разблокировать телефон с помощью входа Google.\n\n Повторите попытку через %d сек.</string>
     <string name="lockscreen_too_many_failed_attempts_countdown">Повторите попытку через %d сек.</string>
     <string name="lockscreen_forgot_pattern_button_text">Забыли комбинацию?</string>
     <string name="lockscreen_glogin_forgot_pattern">Снятие блокировки аккаунта</string>
@@ -693,8 +693,8 @@
     <string name="password_keyboard_label_symbol_key">\?123</string>
     <string name="password_keyboard_label_alpha_key">АБВ</string>
     <string name="password_keyboard_label_alt_key">ALT</string>
-    <string name="hour_ampm">%-l%P</string>
-    <string name="hour_cap_ampm">%-l%p</string>
+    <string name="hour_ampm" formatted="false">%-l%P</string>
+    <string name="hour_cap_ampm" formatted="false">%-l%p</string>
     <string name="factorytest_failed">Ошибка заводского теста</string>
     <string name="factorytest_not_system">Действие FACTORY_TEST поддерживается только для пакетов, установленных в папке /system/app.</string>
     <string name="factorytest_no_action">Пакет, предоставляющий действие FACTORY_TEST, не найден.</string>
