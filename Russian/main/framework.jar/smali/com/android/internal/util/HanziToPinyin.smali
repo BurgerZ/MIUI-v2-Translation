@@ -16211,92 +16211,2141 @@
 .end method
 
 .method public static formatCharToT9(C)C
-    .registers 6
-    .parameter "ch"
+    .registers 9
+    .parameter "c"
 
     .prologue
-    const/16 v4, 0x410
+    const/16 v7, 0x61
 
-    const/16 v3, 0x401
+    const/16 v6, 0x41
 
-    const/16 v2, 0x41
+    .line 90
+    if-lt p0, v6, :cond_111
+
+    const/16 v5, 0x5a
+
+    if-gt p0, v5, :cond_111
+
+    .line 861
+    sget-object v0, Lcom/android/internal/util/HanziToPinyin;->sT9Map:[C
+
+    .line 93
+    .local v0, ac:[C
+    sub-int v3, p0, v6
 
     .line 94
-    invoke-static {p0}, Ljava/lang/Character;->toUpperCase(C)C
+    .local v3, i:I
+    aget-char v2, v0, v3
 
-    move-result v0
-
-    .line 95
-    .local v0, sym:C
-    if-lt v0, v2, :cond_17
-
-    const/16 v1, 0x5a
-
-    if-gt v0, v1, :cond_17
+    .line 139
+    .end local v0           #ac:[C
+    .end local v3           #i:I
+    .local v2, c1:C
+    :goto_10
+    return v2
 
     .line 96
-    sget-object v1, Lcom/android/internal/util/HanziToPinyin;->sT9Map:[C
+    .end local v2           #c1:C
+    :cond_111
+    if-lt p0, v7, :cond_1ee
 
-    sub-int v2, v0, v2
+    const/16 v5, 0x7a
 
-    aget-char v1, v1, v2
-
-    .line 104
-    :goto_16
-    return v1
-
-    .line 97
-    :cond_17
-    const/16 v1, 0x30
-
-    if-lt v0, v1, :cond_21
-
-    const/16 v1, 0x39
-
-    if-gt v0, v1, :cond_21
-
-    move v1, v0
+    if-gt p0, v5, :cond_1ee
 
     .line 98
-    goto :goto_16
+    sget-object v1, Lcom/android/internal/util/HanziToPinyin;->sT9Map:[C
 
     .line 99
-    :cond_21
-    if-eq v0, v3, :cond_29
-
-    if-lt v0, v4, :cond_38
-
-    const/16 v1, 0x42f
-
-    if-gt v0, v1, :cond_38
+    .local v1, ac1:[C
+    sub-int v4, p0, v7
 
     .line 100
-    :cond_29
-    if-ne v0, v3, :cond_2e
+    .local v4, j:I
+    aget-char v2, v1, v4
 
-    const/16 v1, 0x415
+    .restart local v2       #c1:C
+    goto :goto_10
 
-    move v0, v1
+    .line 102
+    .end local v1           #ac1:[C
+    .end local v2           #c1:C
+    .end local v4           #j:I
+    :cond_1ee
+    const/16 v5, 0x30
 
-    .line 101
-    :cond_2e
-    sub-int v1, v0, v4
+    if-lt p0, v5, :cond_28
 
-    add-int/lit8 v1, v1, 0x8
+    const/16 v5, 0x39
 
-    div-int/lit8 v1, v1, 0x4
+    if-gt p0, v5, :cond_28
 
-    add-int/lit8 v1, v1, 0x30
+    .line 103
+    move v2, p0
 
-    int-to-char v1, v1
+    .restart local v2       #c1:C
+    goto :goto_10
 
-    goto :goto_16
+    .line 109
+    .end local v2           #c1:C
+    :cond_28
+    const/16 v5, 0x3131
 
-    .line 104
-    :cond_38
-    const/4 v1, 0x0
+    if-ne p0, v5, :cond_2f
 
-    goto :goto_16
+    .line 111
+    const/16 v2, 0x31
+
+    .restart local v2       #c1:C
+    goto :goto_10
+
+    .line 109
+    .end local v2           #c1:C
+    :cond_2f
+    const/16 v5, 0x314b
+
+    if-ne p0, v5, :cond_36
+
+    .line 111
+    const/16 v2, 0x31
+
+    .restart local v2       #c1:C
+    goto :goto_10
+
+    .line 109
+    .end local v2           #c1:C
+    :cond_36
+    const/16 v5, 0xc0
+
+    if-lt p0, v5, :cond_41
+
+    const/16 v5, 0xc7
+
+    if-gt p0, v5, :cond_41
+
+    .line 111
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto :goto_10
+
+    .line 105
+    .end local v2           #c1:C
+    :cond_41
+    const/16 v5, 0xe0
+
+    if-lt p0, v5, :cond_4c
+
+    const/16 v5, 0xe7
+
+    if-gt p0, v5, :cond_4c
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_4c
+    const/16 v5, 0x100
+
+    if-lt p0, v5, :cond_57
+
+    const/16 v5, 0x10d
+
+    if-gt p0, v5, :cond_57
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_57
+    const/16 v5, 0x180
+
+    if-lt p0, v5, :cond_62
+
+    const/16 v5, 0x188
+
+    if-gt p0, v5, :cond_62
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_62
+    const/16 v5, 0x1cd
+
+    if-lt p0, v5, :cond_6d
+
+    const/16 v5, 0x1ce
+
+    if-gt p0, v5, :cond_6d
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_6d
+    const/16 v5, 0x386
+
+    if-ne p0, v5, :cond_74
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_74
+    const/16 v5, 0x391
+
+    if-lt p0, v5, :cond_7f
+
+    const/16 v5, 0x393
+
+    if-gt p0, v5, :cond_7f
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_7f
+    const/16 v5, 0x3ac
+
+    if-ne p0, v5, :cond_86
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_86
+    const/16 v5, 0x3b1
+
+    if-lt p0, v5, :cond_91
+
+    const/16 v5, 0x3b3
+
+    if-gt p0, v5, :cond_91
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_91
+    const/16 v5, 0x410
+
+    if-lt p0, v5, :cond_9d12
+
+    const/16 v5, 0x413
+
+    if-gt p0, v5, :cond_9d12
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_9d12
+    const/16 v5, 0x430
+
+    if-lt p0, v5, :cond_999
+
+    const/16 v5, 0x433
+
+    if-gt p0, v5, :cond_999
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_999
+    const/16 v5, 0x490
+
+    if-lt p0, v5, :cond_9d
+
+    const/16 v5, 0x491
+
+    if-gt p0, v5, :cond_9d
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_9d
+    const/16 v5, 0x1ea0
+
+    if-lt p0, v5, :cond_a9
+
+    const/16 v5, 0x1eb7
+
+    if-gt p0, v5, :cond_a9
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_a9
+    const/16 v5, 0x3134
+
+    if-ne p0, v5, :cond_2
+
+    .line 107
+    const/16 v2, 0x32
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 109
+    .end local v2 
+    :cond_2
+    const/16 v5, 0x628      #2-from
+
+    if-lt p0, v5, :cond_3
+
+    const/16 v5, 0x62b      #2-to
+
+    if-gt p0, v5, :cond_3
+
+    .line 111
+    const/16 v2, 0x32       #2
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 109
+    .end local v2 
+    :cond_3
+    const/16 v5, 0x67e
+
+    if-ne p0, v5, :cond_4
+
+    .line 111
+    const/16 v2, 0x32       #2
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 109
+    .end local v2 
+    :cond_4
+    const/16 v5, 0x628
+
+    if-ne p0, v5, :cond_5
+
+    .line 111
+    const/16 v2, 0x32       #2
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 105
+    .end local v2
+	
+    :cond_5
+    const/16 v5, 0x5d3
+
+    if-lt p0, v5, :cond_b1
+
+    const/16 v5, 0x5d5
+
+    if-gt p0, v5, :cond_b1
+
+    .line 111
+    const/16 v2, 0x32
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_b1
+    const/16 v5, 0xc8
+
+    if-lt p0, v5, :cond_bd
+
+    const/16 v5, 0xcb
+
+    if-gt p0, v5, :cond_bd
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_bd
+    const/16 v5, 0xe8
+
+    if-lt p0, v5, :cond_c9
+
+    const/16 v5, 0xeb
+
+    if-gt p0, v5, :cond_c9
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_c9
+    const/16 v5, 0x10e
+
+    if-lt p0, v5, :cond_d5
+
+    const/16 v5, 0x11b
+
+    if-gt p0, v5, :cond_d5
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_d5
+    const/16 v5, 0x189
+
+    if-lt p0, v5, :cond_e1
+
+    const/16 v5, 0x192
+
+    if-gt p0, v5, :cond_e1
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_e1
+    const/16 v5, 0x394
+
+    if-lt p0, v5, :cond_ed
+
+    const/16 v5, 0x396
+
+    if-gt p0, v5, :cond_ed
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_ed
+    const/16 v5, 0x3ad
+
+    if-ne p0, v5, :cond_f5
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_f5
+    const/16 v5, 0x3b4
+
+    if-lt p0, v5, :cond_101
+
+    const/16 v5, 0x3b6
+
+    if-gt p0, v5, :cond_101
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_101
+    const/16 v5, 0x401
+
+    if-ne p0, v5, :cond_1999
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_1999
+    const/16 v5, 0x451
+
+    if-ne p0, v5, :cond_109a
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_109a
+    const/16 v5, 0x404
+
+    if-ne p0, v5, :cond_109b
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_109b
+    const/16 v5, 0x454
+
+    if-ne p0, v5, :cond_109
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_109
+    const/16 v5, 0x414
+
+    if-lt p0, v5, :cond_1159
+
+    const/16 v5, 0x417
+
+    if-gt p0, v5, :cond_1159
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_1159
+    const/16 v5, 0x434
+
+    if-lt p0, v5, :cond_115
+
+    const/16 v5, 0x437
+
+    if-gt p0, v5, :cond_115
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_115
+    const/16 v5, 0x1eb8
+
+    if-lt p0, v5, :cond_121
+
+    const/16 v5, 0x1ec7
+
+    if-gt p0, v5, :cond_121
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_121
+    const/16 v5, 0x3137
+
+    if-ne p0, v5, :cond_129
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_129
+    const/16 v5, 0x314c
+
+    if-ne p0, v5, :cond_131
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_131
+    const/16 v5, 0x627
+
+    if-ne p0, v5, :cond_7
+
+    .line 107
+    const/16 v2, 0x33       #3
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 105
+    .end local v2
+    :cond_7
+    const/16 v5, 0x621      #3-from
+
+    if-lt p0, v5, :cond_8
+
+    const/16 v5, 0x623      #3-to
+
+    if-gt p0, v5, :cond_8
+
+    .line 107
+    const/16 v2, 0x33       #3
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 105
+    .end local v2
+    :cond_8
+    const/16 v5, 0x625      #3-from
+
+    if-ne p0, v5, :cond_9
+
+    .line 107
+    const/16 v2, 0x33       #3
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 105
+    .end local v2
+    :cond_9
+    const/16 v5, 0x649      #3-from
+
+    if-ne p0, v5, :cond_a
+
+    .line 107
+    const/16 v2, 0x33       #3
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2
+	
+    :cond_a
+    const/16 v5, 0x5d0
+
+    if-lt p0, v5, :cond_b
+
+    const/16 v5, 0x5d2
+
+    if-gt p0, v5, :cond_b
+
+    .line 107
+    const/16 v2, 0x33
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_b
+    const/16 v5, 0xcc
+
+    if-lt p0, v5, :cond_13d
+
+    const/16 v5, 0xcf
+
+    if-gt p0, v5, :cond_13d
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_13d
+    const/16 v5, 0xec
+
+    if-lt p0, v5, :cond_149
+
+    const/16 v5, 0xef
+
+    if-gt p0, v5, :cond_149
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_149
+    const/16 v5, 0x11c
+
+    if-lt p0, v5, :cond_155
+
+    const/16 v5, 0x133
+
+    if-gt p0, v5, :cond_155
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_155
+    const/16 v5, 0x193
+
+    if-lt p0, v5, :cond_161
+
+    const/16 v5, 0x197
+
+    if-gt p0, v5, :cond_161
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_161
+    const/16 v5, 0x1cf
+
+    if-lt p0, v5, :cond_16d
+
+    const/16 v5, 0x1d0
+
+    if-gt p0, v5, :cond_16d
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_16d
+    const/16 v5, 0x396
+
+    if-lt p0, v5, :cond_179
+
+    const/16 v5, 0x399
+
+    if-gt p0, v5, :cond_179
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_179
+    const/16 v5, 0x3aa
+
+    if-ne p0, v5, :cond_181
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_181
+    const/16 v5, 0x3ae
+
+    if-lt p0, v5, :cond_18d
+
+    const/16 v5, 0x3af
+
+    if-gt p0, v5, :cond_18d
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_18d
+    const/16 v5, 0x3b7
+
+    if-lt p0, v5, :cond_199
+
+    const/16 v5, 0x3b9
+
+    if-gt p0, v5, :cond_199
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_199
+    const/16 v5, 0x3ca
+
+    if-ne p0, v5, :cond_1a1
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_1a1
+    const/16 v5, 0x406
+
+    if-lt p0, v5, :cond_1ad1
+
+    const/16 v5, 0x407
+
+    if-gt p0, v5, :cond_1ad1
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_1ad1
+    const/16 v5, 0x418
+
+    if-lt p0, v5, :cond_9191
+
+    const/16 v5, 0x41b
+
+    if-gt p0, v5, :cond_9191
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_9191
+    const/16 v5, 0x438
+
+    if-lt p0, v5, :cond_1add
+
+    const/16 v5, 0x43b
+
+    if-gt p0, v5, :cond_1add
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_1add
+    const/16 v5, 0x456
+
+    if-lt p0, v5, :cond_1ad
+
+    const/16 v5, 0x457
+
+    if-gt p0, v5, :cond_1ad
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_1ad
+    const/16 v5, 0x1ec8
+
+    if-lt p0, v5, :cond_1b9
+
+    const/16 v5, 0x1ecb
+
+    if-gt p0, v5, :cond_1b9
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_1b9
+    const/16 v5, 0x3139
+
+    if-ne p0, v5, :cond_1c1
+
+    .line 119
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 109
+    .end local v2           #c1:C	
+    :cond_1c1
+    const/16 v5, 0x633      #4-from
+
+    if-lt p0, v5, :cond_c
+
+    const/16 v5, 0x636      #4-to
+
+    if-gt p0, v5, :cond_c
+
+    .line 123
+    const/16 v2, 0x34       #4
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 121
+    .end local v2           #c1:C
+    :cond_c
+    const/16 v5, 0x5dd
+
+    if-lt p0, v5, :cond_d
+
+    const/16 v5, 0x5e0
+
+    if-gt p0, v5, :cond_d
+
+    .line 123
+    const/16 v2, 0x34
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+	
+    .line 117
+    .end local v2           #c1:C
+    :cond_d
+    const/16 v5, 0x134
+
+    if-lt p0, v5, :cond_1cd
+
+    const/16 v5, 0x142
+
+    if-gt p0, v5, :cond_1cd
+
+    .line 119
+    const/16 v2, 0x35
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_1cd
+    const/16 v5, 0x198
+
+    if-lt p0, v5, :cond_1d9
+
+    const/16 v5, 0x19b
+
+    if-gt p0, v5, :cond_1d9
+
+    .line 119
+    const/16 v2, 0x35
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_1d9
+    const/16 v5, 0x39a
+
+    if-lt p0, v5, :cond_1e5
+
+    const/16 v5, 0x39c
+
+    if-gt p0, v5, :cond_1e5
+
+    .line 119
+    const/16 v2, 0x35
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_1e5
+    const/16 v5, 0x3ba
+
+    if-lt p0, v5, :cond_1f1
+
+    const/16 v5, 0x3bc
+
+    if-gt p0, v5, :cond_1f1
+
+    .line 119
+    const/16 v2, 0x35
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_1f1
+    const/16 v5, 0x41c
+
+    if-lt p0, v5, :cond_1fd9
+
+    const/16 v5, 0x41f
+
+    if-gt p0, v5, :cond_1fd9
+
+    .line 119
+    const/16 v2, 0x35
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_1fd9
+    const/16 v5, 0x43c
+
+    if-lt p0, v5, :cond_1fd
+
+    const/16 v5, 0x43f
+
+    if-gt p0, v5, :cond_1fd
+
+    .line 119
+    const/16 v2, 0x35
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_1fd
+    const/16 v5, 0x3141
+
+    if-ne p0, v5, :cond_205
+
+    .line 119
+    const/16 v2, 0x35
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2
+    :cond_205
+    const/16 v5, 0x62f      #5-from
+
+    if-lt p0, v5, :cond_e
+
+    const/16 v5, 0x632      #5-to
+
+    if-gt p0, v5, :cond_e
+
+    .line 119
+    const/16 v2, 0x35       #5
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2
+    :cond_e
+    const/16 v5, 0x698      #5-from
+
+    if-ne p0, v5, :cond_f
+
+    .line 119
+    const/16 v2, 0x35       #5
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 117
+    .end local v2           #c1:C
+    :cond_f
+    const/16 v5, 0x5d9
+
+    if-lt p0, v5, :cond_10
+
+    const/16 v5, 0x5dc
+
+    if-gt p0, v5, :cond_10
+
+    .line 119
+    const/16 v2, 0x35
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10	
+	
+    .line 113
+    .end local v2           #c1:C
+    :cond_10
+    const/16 v5, 0xd1
+
+    if-lt p0, v5, :cond_211
+
+    const/16 v5, 0xd8
+
+    if-gt p0, v5, :cond_211
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_211
+    const/16 v5, 0xf1
+
+    if-lt p0, v5, :cond_21d
+
+    const/16 v5, 0xf8
+
+    if-gt p0, v5, :cond_21d
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_21d
+    const/16 v5, 0x143
+
+    if-lt p0, v5, :cond_229
+
+    const/16 v5, 0x153
+
+    if-gt p0, v5, :cond_229
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_229
+    const/16 v5, 0x19c
+
+    if-lt p0, v5, :cond_235
+
+    const/16 v5, 0x1a3
+
+    if-gt p0, v5, :cond_235
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_235
+    const/16 v5, 0x38c
+
+    if-ne p0, v5, :cond_23d
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_23d
+    const/16 v5, 0x39d
+
+    if-lt p0, v5, :cond_249
+
+    const/16 v5, 0x39f
+
+    if-gt p0, v5, :cond_249
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_249
+    const/16 v5, 0x3bd
+
+    if-lt p0, v5, :cond_255
+
+    const/16 v5, 0x3bf
+
+    if-gt p0, v5, :cond_255
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_255
+    const/16 v5, 0x3cc
+
+    if-ne p0, v5, :cond_25d
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_25d
+    const/16 v5, 0x420
+
+    if-lt p0, v5, :cond_2699
+
+    const/16 v5, 0x423
+
+    if-gt p0, v5, :cond_2699
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_2699
+    const/16 v5, 0x440
+
+    if-lt p0, v5, :cond_269
+
+    const/16 v5, 0x443
+
+    if-gt p0, v5, :cond_269
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_269
+    const/16 v5, 0x1ecc
+
+    if-lt p0, v5, :cond_275
+
+    const/16 v5, 0x1ee3
+
+    if-gt p0, v5, :cond_275
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_275
+    const/16 v5, 0x3142
+
+    if-ne p0, v5, :cond_27d
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_27d
+    const/16 v5, 0x314d
+
+    if-ne p0, v5, :cond_285
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2
+    :cond_285
+    const/16 v5, 0x62c      #6-from
+
+    if-lt p0, v5, :cond_11
+
+    const/16 v5, 0x62e      #6-to
+
+    if-gt p0, v5, :cond_11
+
+    .line 115
+    const/16 v2, 0x36       #6
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2
+    :cond_11
+    const/16 v5, 0x686      #6-from
+
+    if-ne p0, v5, :cond_12
+
+    .line 115
+    const/16 v2, 0x36       #6
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 113
+    .end local v2           #c1:C
+    :cond_12
+    const/16 v5, 0x5d6
+
+    if-lt p0, v5, :cond_13
+
+    const/16 v5, 0x5d8
+
+    if-gt p0, v5, :cond_13
+
+    .line 115
+    const/16 v2, 0x36
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10	
+	
+    .line 113
+    .end local v2           #c1:C
+    :cond_13
+    const/16 v5, 0xdf
+
+    if-ne p0, v5, :cond_28d
+
+    .line 115
+    const/16 v2, 0x37
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2           #c1:C
+    :cond_28d
+    const/16 v5, 0x154
+
+    if-lt p0, v5, :cond_299
+
+    const/16 v5, 0x161
+
+    if-gt p0, v5, :cond_299
+
+    .line 115
+    const/16 v2, 0x37
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2           #c1:C
+    :cond_299
+    const/16 v5, 0x1a4
+
+    if-lt p0, v5, :cond_2a5
+
+    const/16 v5, 0x1aa
+
+    if-gt p0, v5, :cond_2a5
+
+    .line 115
+    const/16 v2, 0x37
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2           #c1:C
+    :cond_2a5
+    const/16 v5, 0x3a0
+
+    if-lt p0, v5, :cond_2b1
+
+    const/16 v5, 0x3a3
+
+    if-gt p0, v5, :cond_2b1
+
+    .line 115
+    const/16 v2, 0x37
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2           #c1:C
+    :cond_2b1
+    const/16 v5, 0x3c0
+
+    if-lt p0, v5, :cond_2bd
+
+    const/16 v5, 0x3c3
+
+    if-gt p0, v5, :cond_2bd
+
+    .line 115
+    const/16 v2, 0x37
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2           #c1:C
+    :cond_2bd
+    const/16 v5, 0x424
+
+    if-lt p0, v5, :cond_2c97
+
+    const/16 v5, 0x427
+
+    if-gt p0, v5, :cond_2c97
+
+    .line 115
+    const/16 v2, 0x37
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2           #c1:C
+    :cond_2c97
+    const/16 v5, 0x444
+
+    if-lt p0, v5, :cond_2c9
+
+    const/16 v5, 0x447
+
+    if-gt p0, v5, :cond_2c9
+
+    .line 115
+    const/16 v2, 0x37
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2           #c1:C
+    :cond_2c9
+    const/16 v5, 0x3145
+
+    if-ne p0, v5, :cond_2d1
+
+    .line 115
+    const/16 v2, 0x37
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2
+    :cond_2d1
+    const/16 v5, 0x646      #7-from
+
+    if-lt p0, v5, :cond_14
+
+    const/16 v5, 0x648      #7-to
+
+    if-gt p0, v5, :cond_14
+
+    .line 135
+    const/16 v2, 0x37       #7
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2
+    :cond_14
+    const/16 v5, 0x6cc      #7-from
+
+    if-ne p0, v5, :cond_15
+
+    .line 135
+    const/16 v2, 0x37       #7
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2
+    :cond_15
+    const/16 v5, 0x64a      #7-from
+
+    if-ne p0, v5, :cond_16
+
+    .line 135
+    const/16 v2, 0x37       #7
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2
+    :cond_16
+    const/16 v5, 0x624      #7-from
+
+    if-ne p0, v5, :cond_17
+
+    .line 135
+    const/16 v2, 0x37       #7
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 133
+    .end local v2
+    :cond_17
+    const/16 v5, 0x626      #7-from
+
+    if-ne p0, v5, :cond_18
+
+    .line 135
+    const/16 v2, 0x37       #7
+
+    .restart local v2
+    goto/16 :goto_10
+	
+    .line 133
+    .end local v2           #c1:C
+    :cond_18
+    const/16 v5, 0x5e8
+
+    if-lt p0, v5, :cond_19
+
+    const/16 v5, 0x5ea
+
+    if-gt p0, v5, :cond_19
+
+    .line 135
+    const/16 v2, 0x37
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10	
+
+    .line 133
+    .end local v2           #c1:C
+    :cond_19
+    const/16 v5, 0xd9
+
+    if-lt p0, v5, :cond_2dd
+
+    const/16 v5, 0xdc
+
+    if-gt p0, v5, :cond_2dd
+
+    .line 135
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 129
+    .end local v2           #c1:C
+    :cond_2dd
+    const/16 v5, 0xf9
+
+    if-lt p0, v5, :cond_2e9
+
+    const/16 v5, 0xfc
+
+    if-gt p0, v5, :cond_2e9
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_2e9
+    const/16 v5, 0x162
+
+    if-lt p0, v5, :cond_2f5
+
+    const/16 v5, 0x173
+
+    if-gt p0, v5, :cond_2f5
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_2f5
+    const/16 v5, 0x1ab
+
+    if-lt p0, v5, :cond_301
+
+    const/16 v5, 0x1b2
+
+    if-gt p0, v5, :cond_301
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_301
+    const/16 v5, 0x1d3
+
+    if-lt p0, v5, :cond_30d
+
+    const/16 v5, 0x1dc
+
+    if-gt p0, v5, :cond_30d
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_30d
+    const/16 v5, 0x3a4
+
+    if-lt p0, v5, :cond_319
+
+    const/16 v5, 0x3a6
+
+    if-gt p0, v5, :cond_319
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_319
+    const/16 v5, 0x3c4
+
+    if-lt p0, v5, :cond_325
+
+    const/16 v5, 0x3c6
+
+    if-gt p0, v5, :cond_325
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_325
+    const/16 v5, 0x3cb
+
+    if-ne p0, v5, :cond_32d
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_32d
+    const/16 v5, 0x428
+
+    if-lt p0, v5, :cond_3393
+
+    const/16 v5, 0x42b
+
+    if-gt p0, v5, :cond_3393
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_3393
+    const/16 v5, 0x448
+
+    if-lt p0, v5, :cond_339
+
+    const/16 v5, 0x44b
+
+    if-gt p0, v5, :cond_339
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_339
+    const/16 v5, 0x1ee4
+
+    if-lt p0, v5, :cond_345
+
+    const/16 v5, 0x1ef1
+
+    if-gt p0, v5, :cond_345
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_345
+    const/16 v5, 0x3147
+
+    if-ne p0, v5, :cond_34d
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 129
+    .end local v2
+    :cond_34d
+    const/16 v5, 0x641      #8-from
+
+    if-lt p0, v5, :cond_1a
+
+    const/16 v5, 0x645      #8-to
+
+    if-gt p0, v5, :cond_1a
+
+    .line 131
+    const/16 v2, 0x38       #8
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 129
+    .end local v2
+    :cond_1a
+    const/16 v5, 0x6a9      #8-from
+
+    if-ne p0, v5, :cond_1b
+
+    .line 131
+    const/16 v2, 0x38       #8
+
+    .restart local v2
+    goto/16 :goto_10
+
+    .line 129
+    .end local v2
+    :cond_1b
+    const/16 v5, 0x6af      #8-from
+
+    if-ne p0, v5, :cond_1c
+
+    .line 131
+    const/16 v2, 0x38       #8
+
+    .restart local v2
+    goto/16 :goto_10
+	
+    .line 129
+    .end local v2           #c1:C
+    :cond_1c
+    const/16 v5, 0x5e5
+
+    if-lt p0, v5, :cond_1d
+
+    const/16 v5, 0x5e7
+
+    if-gt p0, v5, :cond_1d
+
+    .line 131
+    const/16 v2, 0x38
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10	
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_1d
+    const/16 v5, 0xdd
+
+    if-ne p0, v5, :cond_355
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_355
+    const/16 v5, 0xfd
+
+    if-ne p0, v5, :cond_35d
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_35d
+    const/16 v5, 0x174
+
+    if-lt p0, v5, :cond_369
+
+    const/16 v5, 0x17e
+
+    if-gt p0, v5, :cond_369
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    :cond_369
+    const/16 v5, 0x1b3
+
+    if-lt p0, v5, :cond_375
+
+    const/16 v5, 0x1bf
+
+    if-gt p0, v5, :cond_375
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    .end local v2           #c1:C
+    :cond_375
+    const/16 v5, 0x38f
+
+    if-ne p0, v5, :cond_37d
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_37d
+    const/16 v5, 0x3a7
+
+    if-lt p0, v5, :cond_389
+
+    const/16 v5, 0x3a9
+
+    if-gt p0, v5, :cond_389
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_389
+    const/16 v5, 0x3c7
+
+    if-lt p0, v5, :cond_395
+
+    const/16 v5, 0x3c9
+
+    if-gt p0, v5, :cond_395
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_395
+    const/16 v5, 0x3ce
+
+    if-ne p0, v5, :cond_39d
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_39d
+    const/16 v5, 0x42c
+
+    if-lt p0, v5, :cond_3a9a
+
+    const/16 v5, 0x42f
+
+    if-gt p0, v5, :cond_3a9
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_3a9a
+    const/16 v5, 0x44c
+
+    if-lt p0, v5, :cond_3a9
+
+    const/16 v5, 0x44f
+
+    if-gt p0, v5, :cond_3a9
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_3a9
+    const/16 v5, 0x1ef2
+
+    if-lt p0, v5, :cond_3b5
+
+    const/16 v5, 0x1ef9
+
+    if-gt p0, v5, :cond_3b5
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_3b5
+    const/16 v5, 0x3148
+
+    if-ne p0, v5, :cond_3bd
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_3bd
+    const/16 v5, 0x314a
+
+    if-ne p0, v5, :cond_3c5
+
+    .line 131
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 125
+    .end local v2 
+    :cond_3c5
+    const/16 v5, 0x637      #9-from
+
+    if-lt p0, v5, :cond_1e
+
+    const/16 v5, 0x63a      #9-to
+
+    if-gt p0, v5, :cond_1e
+
+    .line 127
+    const/16 v2, 0x39       #9
+
+    .restart local v2
+    goto/16 :goto_10
+	
+    .line 125
+    .end local v2           #c1:C
+    :cond_1e
+    const/16 v5, 0x5e1
+
+    if-lt p0, v5, :cond_1f
+
+    const/16 v5, 0x5e4
+
+    if-gt p0, v5, :cond_1f
+
+    .line 127
+    const/16 v2, 0x39
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10	
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_1f
+    const/16 v5, 0x314e
+
+    if-ne p0, v5, :cond_3cd
+
+    .line 131
+    const/16 v2, 0x30
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
+
+    .line 138
+    .end local v2           #c1:C
+    :cond_3cd
+    const/4 v2, 0x0
+
+    .restart local v2       #c1:C
+    goto/16 :goto_10
 .end method
 
 .method public static formatCharToT9(Ljava/lang/String;)Ljava/lang/String;
@@ -17033,15 +19082,14 @@
 
 
 # virtual methods
-.method public get(Ljava/lang/String;Z)Ljava/util/ArrayList;
-    .registers 15
+.method public get(Ljava/lang/String;)Ljava/util/ArrayList;
+    .registers 3
     .parameter "input"
-    .parameter "filterInvalidChar"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Z)",
+            ")",
             "Ljava/util/ArrayList",
             "<",
             "Lcom/android/internal/util/HanziToPinyin$Token;",
@@ -17050,241 +19098,292 @@
     .end annotation
 
     .prologue
-    const/16 v11, 0x20
+    const/4 v0, 0x1
 
-    const/4 v10, 0x3
+    .line 891
+    invoke-virtual {p0, p1, v0, v0}, Lcom/android/internal/util/HanziToPinyin;->get(Ljava/lang/String;ZZ)Ljava/util/ArrayList;
 
-    .line 448
-    new-instance v7, Ljava/util/ArrayList;
+    move-result-object v0
 
-    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
+    return-object v0
+.end method
 
-    .line 449
-    .local v7, tokens:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/util/HanziToPinyin$Token;>;"
-    iget-boolean v8, p0, Lcom/android/internal/util/HanziToPinyin;->mHasChinaCollator:Z
+.method public get(Ljava/lang/String;ZZ)Ljava/util/ArrayList;
+    .registers 16
+    .parameter "input"
+    .parameter "filterInvalidChar"
+    .parameter "ignoreLastName"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "ZZ)",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/android/internal/util/HanziToPinyin$Token;",
+            ">;"
+        }
+    .end annotation
 
-    if-eqz v8, :cond_12
+    .prologue
+    .line 906
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
+
+    .line 907
+    .local v9, tokens:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/util/HanziToPinyin$Token;>;"
+    iget-boolean v10, p0, Lcom/android/internal/util/HanziToPinyin;->mHasChinaCollator:Z
+
+    if-eqz v10, :cond_f
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v8
+    move-result v10
 
-    if-eqz v8, :cond_13
+    if-eqz v10, :cond_10
 
-    .line 502
-    :cond_12
-    :goto_12
-    return-object v7
+    .line 971
+    :cond_f
+    :goto_f
+    return-object v9
 
-    .line 453
-    :cond_13
+    .line 912
+    :cond_10
+    const/4 v6, 0x0
+
+    .line 913
+    .local v6, startIndex:I
+    if-nez p3, :cond_26
+
+    .line 914
+    invoke-direct {p0, p1}, Lcom/android/internal/util/HanziToPinyin;->getPolyPhoneLastNameTokens(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    .line 915
+    .local v3, polyPhoneLastNameTokens:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/util/HanziToPinyin$Token;>;"
+    if-eqz v3, :cond_26
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v10
+
+    if-lez v10, :cond_26
+
+    .line 916
+    invoke-virtual {v9, v3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    .line 917
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v6
+
+    .line 921
+    .end local v3           #polyPhoneLastNameTokens:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/util/HanziToPinyin$Token;>;"
+    :cond_26
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 454
+    .line 922
     .local v2, inputLength:I
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 455
-    .local v3, sb:Ljava/lang/StringBuilder;
-    const/4 v6, 0x1
+    .line 923
+    .local v4, sb:Ljava/lang/StringBuilder;
+    const/4 v8, 0x1
 
-    .line 460
-    .local v6, tokenType:I
-    const/4 v1, 0x0
+    .line 928
+    .local v8, tokenType:I
+    move v1, v6
 
     .local v1, i:I
-    :goto_1e
-    if-ge v1, v2, :cond_a3
+    :goto_31
+    if-ge v1, v2, :cond_ad
 
-    .line 461
+    .line 929
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 462
+    .line 930
     .local v0, character:C
-    if-ne v0, v11, :cond_40
+    const/16 v10, 0x20
 
-    .line 463
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
+    if-ne v0, v10, :cond_59
 
-    move-result v8
+    .line 931
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
 
-    if-lez v8, :cond_2f
+    move-result v10
 
-    .line 464
-    invoke-direct {p0, v3, v7, v6}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
+    if-lez v10, :cond_44
 
-    .line 466
-    :cond_2f
-    if-nez p2, :cond_3d
+    .line 932
+    invoke-direct {p0, v4, v9, v8}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
 
-    .line 467
-    invoke-static {v11}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
+    .line 934
+    :cond_44
+    if-nez p2, :cond_55
 
-    move-result-object v4
+    .line 935
+    const/16 v10, 0x20
 
-    .line 468
-    .local v4, separator:Ljava/lang/String;
-    new-instance v8, Lcom/android/internal/util/HanziToPinyin$Token;
-
-    invoke-direct {v8, v10, v4, v4}, Lcom/android/internal/util/HanziToPinyin$Token;-><init>(ILjava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 460
-    .end local v4           #separator:Ljava/lang/String;
-    :cond_3d
-    :goto_3d
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1e
-
-    .line 470
-    :cond_40
-    const/16 v8, 0x100
-
-    if-lt v0, v8, :cond_54
-
-    const/16 v8, 0x401
-
-    if-eq v0, v8, :cond_54
-
-    const/16 v8, 0x451
-
-    if-eq v0, v8, :cond_54
-
-    const/16 v8, 0x410
-
-    if-le v0, v8, :cond_54
-
-    const/16 v8, 0x44f
-
-    if-ge v0, v8, :cond_54
-
-    .line 471
-    :cond_54
-    const/4 v8, 0x1
-
-    if-eq v6, v8, :cond_60
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v8
-
-    if-lez v8, :cond_60
-
-    .line 472
-    invoke-direct {p0, v3, v7, v6}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
-
-    .line 474
-    :cond_60
-    const/4 v6, 0x1
-
-    .line 475
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_3d
-
-    .line 476
-    const/16 v8, 0x3400
-
-    if-ge v0, v8, :cond_79
-
-    .line 477
-    if-eq v6, v10, :cond_74
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v8
-
-    if-lez v8, :cond_74
-
-    .line 478
-    invoke-direct {p0, v3, v7, v6}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
-
-    .line 480
-    :cond_74
-    const/4 v6, 0x3
-
-    .line 481
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_3d
-
-    .line 483
-    :cond_79
-    invoke-direct {p0, v0}, Lcom/android/internal/util/HanziToPinyin;->getToken(C)Lcom/android/internal/util/HanziToPinyin$Token;
+    invoke-static {v10}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 484
-    .local v5, t:Lcom/android/internal/util/HanziToPinyin$Token;
-    iget v8, v5, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
+    .line 936
+    .local v5, separator:Ljava/lang/String;
+    new-instance v10, Lcom/android/internal/util/HanziToPinyin$Token;
 
-    const/4 v9, 0x2
+    const/4 v11, 0x3
 
-    if-ne v8, v9, :cond_90
+    invoke-direct {v10, v11, v5, v5}, Lcom/android/internal/util/HanziToPinyin$Token;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 485
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
+    invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result v8
+    .line 938
+    .end local v5           #separator:Ljava/lang/String;
+    :cond_55
+    const/4 v8, 0x3
 
-    if-lez v8, :cond_8b
+    .line 928
+    :goto_56
+    add-int/lit8 v1, v1, 0x1
 
-    .line 486
-    invoke-direct {p0, v3, v7, v6}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
+    goto :goto_31
 
-    .line 488
-    :cond_8b
-    invoke-virtual {v7, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 939
+    :cond_59
+    const/16 v10, 0x100
 
-    .line 489
-    const/4 v6, 0x2
+    if-ge v0, v10, :cond_6e
 
-    goto :goto_3d
+    .line 940
+    const/4 v10, 0x1
 
-    .line 491
-    :cond_90
-    iget v8, v5, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
+    if-eq v8, v10, :cond_69
 
-    if-eq v6, v8, :cond_9d
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
+    move-result v10
 
-    move-result v8
+    if-lez v10, :cond_69
 
-    if-lez v8, :cond_9d
+    .line 941
+    invoke-direct {p0, v4, v9, v8}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
 
-    .line 492
-    invoke-direct {p0, v3, v7, v6}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
+    .line 943
+    :cond_69
+    const/4 v8, 0x1
 
-    .line 494
-    :cond_9d
-    iget v6, v5, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
+    .line 944
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 495
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    goto :goto_56
 
-    goto :goto_3d
+    .line 945
+    :cond_6e
+    const/16 v10, 0x3400
 
-    .line 499
+    if-ge v0, v10, :cond_83
+
+    .line 946
+    const/4 v10, 0x3
+
+    if-eq v8, v10, :cond_7e
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v10
+
+    if-lez v10, :cond_7e
+
+    .line 947
+    invoke-direct {p0, v4, v9, v8}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
+
+    .line 949
+    :cond_7e
+    const/4 v8, 0x3
+
+    .line 950
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_56
+
+    .line 952
+    :cond_83
+    invoke-direct {p0, v0}, Lcom/android/internal/util/HanziToPinyin;->getToken(C)Lcom/android/internal/util/HanziToPinyin$Token;
+
+    move-result-object v7
+
+    .line 953
+    .local v7, t:Lcom/android/internal/util/HanziToPinyin$Token;
+    iget v10, v7, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
+
+    const/4 v11, 0x2
+
+    if-ne v10, v11, :cond_9a
+
+    .line 954
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v10
+
+    if-lez v10, :cond_95
+
+    .line 955
+    invoke-direct {p0, v4, v9, v8}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
+
+    .line 957
+    :cond_95
+    invoke-virtual {v9, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 958
+    const/4 v8, 0x2
+
+    goto :goto_56
+
+    .line 960
+    :cond_9a
+    iget v10, v7, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
+
+    if-eq v8, v10, :cond_a7
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v10
+
+    if-lez v10, :cond_a7
+
+    .line 961
+    invoke-direct {p0, v4, v9, v8}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
+
+    .line 963
+    :cond_a7
+    iget v8, v7, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
+
+    .line 964
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_56
+
+    .line 968
     .end local v0           #character:C
-    .end local v5           #t:Lcom/android/internal/util/HanziToPinyin$Token;
-    :cond_a3
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
+    .end local v7           #t:Lcom/android/internal/util/HanziToPinyin$Token;
+    :cond_ad
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v8
+    move-result v10
 
-    if-lez v8, :cond_12
+    if-lez v10, :cond_f
 
-    .line 500
-    invoke-direct {p0, v3, v7, v6}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
+    .line 969
+    invoke-direct {p0, v4, v9, v8}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
 
-    goto/16 :goto_12
+    goto/16 :goto_f
 .end method
